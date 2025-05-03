@@ -16,6 +16,50 @@
             "justMyCode": true
         },
         {
+            "name": "Python: migrate",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/manage.py",
+            "args": [
+                "migrate"
+            ],
+            "django": true,
+            "justMyCode": true
+        },
+        {
+            "name": "Python: seed data",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/manage.py",
+            "args": [
+                "loaddata","src/seed_data.json"
+            ],
+            "django": true,
+            "justMyCode": true
+        },
+        {
+            "name": "Python: run locally",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/manage.py",
+            "args": [
+                "runserver","8000"
+            ],
+            "django": true,
+            "justMyCode": true
+        },
+        {
+            "name": "Python: create superuser",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/manage.py",
+            "args": [
+                "createsuperuser"
+            ],
+            "django": true,
+            "justMyCode": true
+        },
+        {
             "name": "Python: Debug Tests",
             "type": "debugpy",
             "request": "launch",
