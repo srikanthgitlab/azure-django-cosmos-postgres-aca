@@ -71,5 +71,9 @@ class Migration(migrations.Migration):
             model_name="cruise",
             name="destinations",
             field=models.ManyToManyField(to="relecloud.Destination"),
+        ),migrations.AlterField(
+            model_name='review',
+            name='rating',
+            field=models.IntegerField(validators=[django.core.validators.MinValueValidator(1), django.core.validators.MaxValueValidator(5)]),
         ),
     ]

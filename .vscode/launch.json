@@ -27,6 +27,17 @@
             "justMyCode": true
         },
         {
+            "name": "Python: makemigrations",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/manage.py",
+            "args": [
+                "makemigrations","relecloud"
+            ],
+            "django": true,
+            "justMyCode": true
+        },
+        {
             "name": "Python: seed data",
             "type": "debugpy",
             "request": "launch",

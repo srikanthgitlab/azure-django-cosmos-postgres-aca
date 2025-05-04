@@ -18,5 +18,8 @@ class Migration(migrations.Migration):
             model_name="destination",
             name="subtitle",
             field=models.CharField(blank=True, max_length=240, unique=True),
+        ),migrations.RemoveField(
+            model_name='restaurant',
+            name='image_name',
         ),
     ]

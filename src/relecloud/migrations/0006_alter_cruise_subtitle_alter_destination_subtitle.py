@@ -18,5 +18,9 @@ class Migration(migrations.Migration):
             model_name="destination",
             name="subtitle",
             field=models.CharField(blank=True, max_length=240),
+        ),migrations.AlterField(
+            model_name='review',
+            name='image_name',
+            field=models.CharField(max_length=100, null=True),
         ),
     ]

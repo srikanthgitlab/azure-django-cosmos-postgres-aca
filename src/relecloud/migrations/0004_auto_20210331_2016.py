@@ -13,5 +13,14 @@ class Migration(migrations.Migration):
             model_name="inforequest",
             name="name",
             field=models.CharField(max_length=50),
+        ),migrations.AlterField(
+            model_name='restaurant',
+            name='image_name',
+            field=models.UUIDField(),
+        ),
+        migrations.AlterField(
+            model_name='review',
+            name='image_name',
+            field=models.UUIDField(),
         ),
     ]
