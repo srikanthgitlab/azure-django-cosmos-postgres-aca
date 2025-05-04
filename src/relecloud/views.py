@@ -43,3 +43,8 @@ class InfoRequestCreate(SuccessMessageMixin, generic.CreateView):
     fields = ["name", "email", "cruise", "notes"]
     success_url = reverse_lazy("index")
     success_message = "Thank you, %(name)s! We will email you when we have more information about %(cruise)s!"
+
+    def get_context_data(self, **kwargs: Any) -> Dict[str, Any]:
+        context = super().get_context_data(**kwargs)
+        context["cruises"] = models.Cruise.objects.all()  # Pass all cruises to the template
+        return context
