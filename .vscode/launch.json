@@ -27,6 +27,17 @@
             "justMyCode": true
         },
         {
+            "name": "Python: dbshell",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/manage.py",
+            "args": [
+                "dbshell"
+            ],
+            "django": true,
+            "justMyCode": true
+        },
+        {
             "name": "Python: makemigrations",
             "type": "debugpy",
             "request": "launch",

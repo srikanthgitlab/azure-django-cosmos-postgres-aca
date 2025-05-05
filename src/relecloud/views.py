@@ -1,4 +1,4 @@
-from datetime import timezone
+from django.utils import timezone
 import os
 from typing import Any, Dict
 import uuid
@@ -16,8 +16,8 @@ from django.contrib import messages
 from . import models
 
 # Create your views here.
-def index(request):
-    return render(request, "index.html")
+# def index(request):
+#     return render(request, "index.html")
 
 
 def about(request):
@@ -60,10 +60,10 @@ class InfoRequestCreate(SuccessMessageMixin, generic.CreateView):
 
 # Create your views here.
 
-# def index(request):
-#     print('Request for index page received')
-#     restaurants = Restaurant.objects.annotate(avg_rating=Avg('review__rating')).annotate(review_count=Count('review'))
-#     return render(request, 'restaurant_review/index.html', {'restaurants': restaurants })
+def index(request):
+    print('Request for index page received')
+    restaurants = models.Restaurant.objects.annotate(avg_rating=Avg('review__rating')).annotate(review_count=Count('review'))
+    return render(request, 'restaurant_review/index.html', {'restaurants': restaurants })
 
 
 def details(request, id):
